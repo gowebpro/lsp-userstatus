@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin>
+	<name>
+		<lang name="default">User Status</lang>
+		<lang name="russian">Статус пользователя</lang>
+	</name>
+	<author>
+		<lang name="default">Chiffa</lang>
+		<lang name="russian">Chiffa</lang>
+	</author>
+	<homepage>http://ars-team.ru</homepage>
+	<version>1.0</version>
+	<requires>
+		<livestreet>1.0</livestreet>
+	</requires>
+	<description>
+		<lang name="default">Just text status in user profile</lang>
+		<lang name="russian">Просто текстовой статус в профиле пользователя</lang>
+	</description>
+</plugin>

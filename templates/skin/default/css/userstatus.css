@@ -1,0 +1,46 @@
+.profile-status {
+	position: relative;
+	margin-top: 10px
+}
+.profile-status span.my-status {
+	color: #000;
+	font-size: 13px
+}
+.profile-status span.no-status {
+	color: #777;
+	font-size: 13px
+}
+.profile-status #status_editor {
+	position: absolute;
+	top: -11px;
+	left: -12px;
+	-moz-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+	padding: 5px;
+	-webkit-box-shadow: 0 0 5px #ddd;
+	box-shadow: 0 0 5px #ddd;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#f3f3f3));
+	background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+	background: -o-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+	background: -ms-linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+	background: linear-gradient(top, #ffffff 0%,#f3f3f3 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 );
+	z-index: 11;
+}
+.profile-status #editor_text {
+	font-size: 13px;
+	margin-bottom: 5px
+}
+.profile-status #status_view {
+
+}
+.profile-status #status_update {
+	color: #777;
+	font-style: italic;
+	font-size: 0.8em;
+	text-transform: lowercase;
+}
