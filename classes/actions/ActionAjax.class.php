@@ -60,7 +60,7 @@ class PluginUserstatus_ActionAjax extends PluginUserstatus_Inherit_ActionAjax {
 		$oViewer->Assign('oUserProfile',$this->oUserCurrent);
 		$oViewer->Assign('oUserCurrent',$this->oUserCurrent);
 		$oViewer->Assign('oUserStatus',$oUserStatus);
-		$sText=$oViewer->Fetch('actions/ActionProfile/status_item.tpl');
+		$sText=$oViewer->Fetch(Plugin::GetTemplatePath(__CLASS__).'actions/ActionProfile/status_item.tpl');
 		$this->Viewer_AssignAjax('sText',$sText);
 		$this->Message_AddNoticeSingle($this->Lang_Get('plugin.userstatus.user_status_change_ok'));
 		return;

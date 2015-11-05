@@ -1,7 +1,6 @@
 .profile-status {
-	position: absolute;
-	top: 0px;
-	left: 240px
+	position: relative;
+	margin-top: 10px;
 }
 .profile-status span.my-status {
 	color: #000;

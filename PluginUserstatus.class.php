@@ -25,6 +25,7 @@ class PluginUserstatus extends Plugin {
 		)
 	);
 	protected $aDelegates = array(
+	// вызывает баг "непонятная хуйня"
 	//	'template' => array(
 	//		'actions/ActionProfile/status_item.tpl'
 	//	)
