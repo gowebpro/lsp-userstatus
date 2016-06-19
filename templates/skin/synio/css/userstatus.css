@@ -1,38 +1,39 @@
+
 .profile-status {
-	position: relative;
-	margin-top: 10px;
+    position: relative;
+    margin-top: 10px;
 }
 .profile-status span.my-status {
-	color: #000;
-	font-size: 13px
+    color: #000;
+    font-size: 13px
 }
 .profile-status span.no-status {
-	color: #949aa1;
-	font-size: 13px
+    color: #949aa1;
+    font-size: 13px
 }
 .profile-status #status_editor {
-	position: absolute;
-	top: -10px;
-	left: -11px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	border-radius: 6px;
-	padding: 5px;
-	background-color: #e0eff9;
-	-webkit-box-shadow: 0 0 15px rgba(0,0,0,.5);
-	box-shadow: 0 0 15px;
-	z-index: 11;
+    position: absolute;
+    top: -10px;
+    left: -11px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    padding: 5px;
+    background-color: #e0eff9;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,.5);
+    box-shadow: 0 0 15px;
+    z-index: 11;
 }
 .profile-status #editor_text {
-	font-size: 13px;
-	margin-bottom: 5px
+    font-size: 13px;
+    margin-bottom: 5px
 }
 .profile-status #status_view {
 
 }
 .profile-status #status_update {
-	color: #949aa1;
-	font-style: italic;
-	font-size: 0.8em;
-	text-transform: lowercase;
+    color: #949aa1;
+    font-style: italic;
+    font-size: 0.8em;
+    text-transform: lowercase;
 }
