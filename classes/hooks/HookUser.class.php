@@ -1,15 +1,12 @@
 <?php
-/*---------------------------------------------------------------------------
-* @Module Name: UserStatus
-* @Description: UserStatus for LiveStreet
-* @Version: 1.0
-* @Author: Chiffa
-* @LiveStreet version: 1.X
-* @File Name: HookUser.class.php
-* @License: CC BY-NC, http://creativecommons.org/licenses/by-nc/3.0/
-*----------------------------------------------------------------------------
+/*-------------------------------------------------------
+*
+*   Plugin name:    Userstatus
+*   Author:         Chiffa
+*   Web:            http://goweb.pro
+*
+---------------------------------------------------------
 */
-
 
 /**
  * Регистрация хуков
@@ -18,11 +15,13 @@
 class PluginUserstatus_HookUser extends Hook
 {
 
-    public function RegisterHook() {
+    public function RegisterHook()
+    {
         $this->AddHook('template_profile_top_end','tplProfileTopBegin');
     }
 
-    public function tplProfileTopBegin($aParams = array()) {
+    public function tplProfileTopBegin($aParams = array())
+    {
         $oUserProfile = isset($aParams['oUserProfile']) ? $aParams['oUserProfile'] : null;
         $oUserCurrent = $this->User_GetUserCurrent();
         if ($oUserProfile) {
