@@ -14,7 +14,7 @@
     {if $sTextStatus && $sTextDate}
         <span class="status-update">
             {$aLang.plugin.userstatus.user_status_update}
-            {date_format date=$sTextDate format="F Y" days_back="365" hours_back="23" minutes_back="60" seconds_back="60"}
+            {date_format date=$sTextDate format="F Y" days_back="365" hours_back="23" minutes_back="60" now="5"}
         </span>
     {/if}
 
@@ -32,7 +32,7 @@
         {if $sTextStatus && $sTextDate}
             <span class="status-update">
                 {$aLang.plugin.userstatus.user_status_update}
-                {date_format date=$sTextDate format="F Y" days_back="365" hours_back="23" minutes_back="60" seconds_back="60"}
+                {date_format date=$sTextDate format="F Y" days_back="365" hours_back="23" minutes_back="60" now="5"}
             </span>
         {/if}
     {/if}
