@@ -1,0 +1,6 @@
+{
+  "name": "LS Plugin - Userstatus",
+  "tagline": "Fast text status for user profile.",
+  "body": "Plugin for [LiveStreet CMS](http://livestreetcms.com/ \"LiveStreet CMS\")\r\n-----------------------------------------------------------------------\r\n\r\nAttention\r\nTo use this plugin requires **Livestreet CMS version 1.0 or later**.\r\n\r\n\r\nAbout project\r\n-------------\r\nДобавляет простой текстовый статус в профиль пользователя\r\n\r\nChangelog:\r\n----------\r\n**1.2:**\r\n- Исправлена эпичная ошибка issue#1;\r\n- Исправлен формат даты.\r\n\r\n\r\nLicense\r\n-------\r\n[ ![CC BY-NC](http://i.creativecommons.org/l/by-nc/3.0/88x31.png \"CC BY-NC\") ](http://creativecommons.org/licenses/by-nc/3.0/ \"CC BY-NC\")",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
