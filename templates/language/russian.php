@@ -19,4 +19,13 @@ return array(
 
     'user_status_save' => 'Сохранить',
     'user_status_cancel' => 'Отменить',
+
+    'event_type_update_status' => 'Обновление статуса профиля',
+
+    'event_update_status' => 'обновил статус профиля',
+    'event_update_status_clear' => 'очистил статус профиля',
+
+    'event_update_status_female' => 'обновила статус профиля',
+    'event_update_status_clear_female' => 'очистила статус профиля',
+
 );

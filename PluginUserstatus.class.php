@@ -21,6 +21,9 @@ class PluginUserstatus extends Plugin
     protected $aInherits = array(
         'action' => array(
             'ActionAjax'
+        ),
+        'module' => array(
+            'ModuleStream'
         )
     );
 
@@ -31,7 +34,7 @@ class PluginUserstatus extends Plugin
     public function Activate()
     {
         if (!$this->isTableExists('prefix_user_status')) {
-            $this->ExportSQL(dirname(__FILE__).'/sql/install.sql');
+            $this->ExportSQL(dirname(__FILE__) . '/sql/install.sql');
         }
         return true;
     }
@@ -41,7 +44,7 @@ class PluginUserstatus extends Plugin
      */
     public function Init()
     {
-        $this->Viewer_Assign('sTemplatePathStatus', rtrim(Plugin::GetTemplatePath(__CLASS__),'/'));
+        $this->Viewer_Assign('sTemplatePathStatus', rtrim(Plugin::GetTemplatePath(__CLASS__), '/'));
         /**
          * Подключаем CSS
          */
@@ -50,6 +53,22 @@ class PluginUserstatus extends Plugin
          * Подключаем JS
          */
         $this->Viewer_AppendScript(Plugin::GetPath(__CLASS__) . 'templates/framework/js/userstatus.js?v=1');
+        /**
+         * Добавляем в ленту новый тип события
+         *  - при наличии модуля Stream
+         */
+        if (class_exists('ModuleStream')){
+            $this->Stream_AddEventType('update_status', array('related' => 'userStatus'));
+            /**
+             * Добавляем текстовки новых типов событий
+             */
+            $this->Lang_AddMessages(
+                array(
+                    'stream_event_type_update_status' => $this->Lang_Get('plugin.userstatus.event_type_update_status')
+                )
+            );
+            $this->Viewer_Assign('aLang', $this->Lang_GetLangMsg());
+        }
     }
 
 }

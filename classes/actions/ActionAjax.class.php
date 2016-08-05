@@ -54,6 +54,10 @@ class PluginUserstatus_ActionAjax extends PluginUserstatus_Inherit_ActionAjax
             return false;
         }
         /**
+         * Добавляем событие в ленту
+         */
+        $this->Stream_write($oUserStatus->getUserId(), 'update_status', $oUserStatus->getUserId());
+        /**
          * Показываем сообщение и передаем переменные в ajax ответ
          */
         $oViewer = $this->Viewer_GetLocalViewer();
