@@ -8,10 +8,7 @@
 ---------------------------------------------------------
 */
 
-/**
- * Модуль
- *
- */
+
 class PluginUserstatus_ModuleUser extends ModuleORM
 {
 

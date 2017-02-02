@@ -8,7 +8,8 @@
 ---------------------------------------------------------
 */
 
-class PluginUserstatus_ModuleStream extends PluginUserstatus_Inherit_ModuleStream {
+class PluginUserstatus_ModuleStream extends PluginUserstatus_Inherit_ModuleStream
+{
 
     /**
      * Получает объекты статусов

@@ -8,11 +8,7 @@
 ---------------------------------------------------------
 */
 
-/**
- * Экшен обработки ajax запросов
- * Ответ отдает в JSON фомате
- *
- */
+
 class PluginUserstatus_ActionAjax extends PluginUserstatus_Inherit_ActionAjax
 {
 
@@ -22,7 +18,7 @@ class PluginUserstatus_ActionAjax extends PluginUserstatus_Inherit_ActionAjax
     protected function RegisterEvent()
     {
         parent::RegisterEvent();
-        $this->AddEventPreg('/^user$/i','/^status$/','EventUserStatus');
+        $this->AddEventPreg('#^user$#i', '#^status$#', 'EventUserStatus');
     }
 
 
@@ -44,7 +40,7 @@ class PluginUserstatus_ActionAjax extends PluginUserstatus_Inherit_ActionAjax
             $oUserStatus = Engine::GetEntity('PluginUserstatus_User_Status');
             $oUserStatus->setUserId($this->oUserCurrent->getId());
         }
-        $oUserStatus->setText(getRequest('text', null, 'post'));
+        $oUserStatus->setText(getRequestStr('text'));
         $oUserStatus->setDate(date('Y-m-d H:i:s'));
         /**
          * Сохраняем
@@ -56,17 +52,15 @@ class PluginUserstatus_ActionAjax extends PluginUserstatus_Inherit_ActionAjax
         /**
          * Добавляем событие в ленту
          */
-        $this->Stream_write($oUserStatus->getUserId(), 'update_status', $oUserStatus->getUserId());
+        if (isPost('activity') || (!Config::Get('plugin.userstatus.choose_activity'))) {
+            $this->Stream_write($oUserStatus->getUserId(), 'update_status', $oUserStatus->getUserId());
+        }
         /**
          * Показываем сообщение и передаем переменные в ajax ответ
          */
-        $oViewer = $this->Viewer_GetLocalViewer();
-        $oViewer->Assign('oUserProfile', $this->oUserCurrent);
-        $oViewer->Assign('oUserCurrent', $this->oUserCurrent);
-        $oViewer->Assign('oUserStatus', $oUserStatus);
-        $sText = $oViewer->Fetch(Plugin::GetTemplatePath(__CLASS__) . 'actions/ActionProfile/status_item.tpl');
-        $this->Viewer_AssignAjax('sText', $sText);
-        $this->Message_AddNoticeSingle($this->Lang_Get('plugin.userstatus.user_status_change_ok'));
+        $this->Viewer_AssignAjax('sStatusText', $oUserStatus->getText());
+        $this->Viewer_AssignAjax('sStatusDate', $this->Lang_Get('plugin.userstatus.updated_now'));
+        $this->Message_AddNoticeSingle($this->Lang_Get('plugin.userstatus.change_ok'));
         return true;
     }
 

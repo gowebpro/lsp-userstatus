@@ -1,0 +1,16 @@
+{
+    "name": "user",
+    "version": "1.0.0",
+    "dependencies": {
+
+    },
+    "templates": {
+        "status": "status.tpl"
+    },
+    "scripts": {
+        "status": "js/status.js"
+    },
+    "styles": {
+        "status": "css/status.css"
+    }
+}

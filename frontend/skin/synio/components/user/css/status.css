@@ -1,0 +1,61 @@
+
+.ls-user-status {
+    position: relative;
+    margin-top: 10px;
+}
+
+/**
+ * Редактор
+ */
+.ls-user-status-editor {
+    position: absolute;
+    top: -13px;
+    left: -9px;
+    display: none;
+    width: 100%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #e0eff9;
+    -webkit-box-shadow: 0 0 15px rgba(0,0,0,.5);
+    box-shadow: 0 0 15px rgba(0,0,0,.5);
+    z-index: 11;
+}
+.ls-user-status-editor .ls-field {
+    margin-bottom: 10px;
+}
+.ls-user-status-editor .ls-field textarea {
+    font-size: 13px;
+    line-height: 20px;
+    height: 50px;
+}
+.ls-user-status-editor .ls-field--checkbox {
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 0;
+}
+
+.ls-user-status-block {
+    padding: 5px 8px;
+    cursor: pointer;
+}
+.ls-user-status-block:hover {
+    background-color: #f7f7f7;
+}
+
+.ls-user-status-text {
+    font-size: 13px;
+    color: #949aa1;
+}
+.ls-user-status-text.has {
+    color: #000;
+}
+.ls-user-status-date {
+    color: #949aa1;
+    font-style: italic;
+    font-size: 0.8em;
+    text-transform: lowercase;
+}
+

@@ -1,14 +1,20 @@
 <?php
 /*-------------------------------------------------------
 *
-*	Plugin name:	Userstatus
-*	Author:			Chiffa
-*	Web:			http://goweb.pro
+*   Plugin name:    Userstatus
+*   Author:         Chiffa
+*   Web:            http://goweb.pro
 *
 ---------------------------------------------------------
 */
 
-$config = array();
-
-
-return $config;
+return [
+    '$root$' => [
+        'db' => [
+            'table' => [
+                'userstatus_user_status' => '___db.table.prefix___user_status'
+            ]
+        ]
+    ],
+    'choose_activity' => false,
+];

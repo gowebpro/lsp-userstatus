@@ -17,27 +17,27 @@ class PluginUserstatus_HookUser extends Hook
 
     public function RegisterHook()
     {
-        $this->AddHook('template_profile_top_end', 'tplProfileTopBegin');
-        $this->AddHook('template_stream_list_event_update_status', 'StreamEventUpdateStatus');
+        $this->AddHook('template_user_header_end', 'UserHeaderEnd');
+        $this->AddHook('template_activity_event_update_status', 'ActivityEventUpdateStatus');
     }
 
-    public function tplProfileTopBegin($aParams = array())
+    public function UserHeaderEnd($aParams = [])
     {
-        $oUserProfile = isset($aParams['oUserProfile']) ? $aParams['oUserProfile'] : null;
+        $oUserProfile = isset($aParams['user']) ? $aParams['user'] : null;
         $oUserCurrent = $this->User_GetUserCurrent();
         if ($oUserProfile) {
             $oUserStatus = $this->PluginUserstatus_User_GetStatusByUserId($oUserProfile->getId());
-            $this->Viewer_Assign('oUserProfile', $oUserProfile);
-            $this->Viewer_Assign('oUserCurrent', $oUserCurrent);
-            $this->Viewer_Assign('oUserStatus', $oUserStatus);
-            return $this->Viewer_Fetch(Plugin::GetTemplatePath(__CLASS__) . 'inject.header_top.tpl');
+            $this->Viewer_Assign('user', $oUserProfile, true);
+            $this->Viewer_Assign('status', $oUserStatus, true);
+            return $this->Viewer_Fetch("Component@userstatus:user.status");
         }
     }
 
-    public function StreamEventUpdateStatus($aParams=array()) {
-        if (isset($aParams['oStreamEvent'])) {
-            $this->Viewer_Assign('oStreamEvent', $aParams['oStreamEvent']);
-            return $this->Viewer_Fetch(Plugin::GetTemplatePath(__CLASS__) . 'event.update_status.tpl');
+    public function ActivityEventUpdateStatus($aParams = [])
+    {
+        if (isset($aParams['event'])) {
+            $this->Viewer_Assign('event', $aParams['event'], true);
+            return $this->Viewer_Fetch("Component@userstatus:activity.event_status");
         }
     }
 

@@ -1,33 +1,23 @@
 
-.profile-status {
+.ls-user-status {
     position: relative;
     margin-top: 10px;
 }
-.profile-status .status-view {
-    font-size: 13px;
-    color: #777;
-    cursor: pointer;
-}
-.profile-status .status-view.has {
-    color: #000;
-}
-.profile-status .status-update {
-    color: #777;
-    font-style: italic;
-    font-size: 0.8em;
-    text-transform: lowercase;
-}
 
-.profile-status .status-editor {
+/**
+ * Редактор
+ */
+.ls-user-status-editor {
     position: absolute;
-    top: -11px;
-    left: -12px;
+    top: -12px;
+    left: -9px;
     display: none;
-    -moz-border-radius: 6px;
+    width: 100%;
     -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
     border-radius: 6px;
     border: 1px solid #ddd;
-    padding: 5px;
+    padding: 10px;
     -webkit-box-shadow: 0 0 5px #ddd;
     box-shadow: 0 0 5px #ddd;
     background: #ffffff;
@@ -40,20 +30,39 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f3f3f3',GradientType=0 );
     z-index: 11;
 }
-.profile-status .status-editor input[type="text"] {
-    margin-bottom: 5px;
-    width: 400px;
+.ls-user-status-editor .ls-field {
+    margin-bottom: 10px;
+}
+.ls-user-status-editor .ls-field textarea {
     font-size: 13px;
+    line-height: 20px;
+    height: 50px;
 }
-.profile-status .status-editor button {
-    float: right;
-    margin-left: 7px;
+.ls-user-status-editor .ls-field--checkbox {
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-bottom: 0;
 }
-.profile-status .status-editor-buttons:before,
-.profile-status .status-editor-buttons:after {
-    content: '';
-    display: table;
+
+.ls-user-status-block {
+    padding: 5px 8px;
+    cursor: pointer;
 }
-.profile-status .status-editor-buttons:after {
-    clear: both;
+.ls-user-status-block:hover {
+    background-color: #f7f7f7;
 }
+
+.ls-user-status-text {
+    font-size: 13px;
+    color: #777;
+}
+.ls-user-status-text.has {
+    color: #000;
+}
+.ls-user-status-date {
+    color: #777;
+    font-style: italic;
+    font-size: 0.8em;
+    text-transform: lowercase;
+}
+

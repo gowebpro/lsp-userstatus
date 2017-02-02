@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin>
-	<name>
-		<lang name="default">User Status</lang>
-		<lang name="russian">Статус пользователя</lang>
-	</name>
-	<author>
-		<lang name="default">Chiffa</lang>
-	</author>
-	<homepage>http://goweb.pro</homepage>
-	<version>1.3</version>
-	<requires>
-		<livestreet>1.0</livestreet>
-	</requires>
-	<description>
-		<lang name="default">Just text status in user profile</lang>
-		<lang name="russian">Просто текстовой статус в профиле пользователя</lang>
-	</description>
+    <name>
+        <lang name="default">User Status</lang>
+        <lang name="russian">Статус пользователя</lang>
+    </name>
+    <author>
+        <lang name="default">Chiffa</lang>
+    </author>
+    <homepage>http://ls.goweb.pro/plugin-userstatus</homepage>
+    <version>2.0.0</version>
+    <requires>
+        <livestreet>2.0.*</livestreet>
+    </requires>
+    <description>
+        <lang name="default">Just text status in user profile</lang>
+        <lang name="russian">Просто текстовой статус в профиле пользователя</lang>
+    </description>
 </plugin>
