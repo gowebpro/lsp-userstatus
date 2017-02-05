@@ -7,10 +7,11 @@
     <author>
         <lang name="default">Chiffa</lang>
     </author>
-    <homepage>http://goweb.pro</homepage>
+    <homepage>http://ls.goweb.pro/plugin-userstatus</homepage>
     <version>2.0.0</version>
     <requires>
         <livestreet>2.0.*</livestreet>
+        <plugins></plugins>
     </requires>
     <description>
         <lang name="default">Just text status in user profile</lang>
