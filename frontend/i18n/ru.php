@@ -1,7 +1,7 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Plugin name:    Userstatus
+*   Plugin name:    User Status
 *   Author:         Chiffa
 *   Web:            http://goweb.pro
 *
@@ -26,6 +26,13 @@ return [
             'description' => '',
         ]
     ],
+    'activity' => [
+        'settings' => [
+            'options' => [
+                'update_status' => 'Обновление статуса профиля',
+            ]
+        ]
+    ],
 
     'change' => 'Изменить статус',
     'change_ok' => 'Статус сохранен',
@@ -35,8 +42,6 @@ return [
 
     'save' => 'Сохранить',
     'cancel' => 'Отменить',
-
-    'event_type_update_status' => 'Обновление статуса профиля',
 
     'event_update_status_male' => 'обновил статус профиля',
     'event_update_status_male_clear' => 'очистил статус профиля',

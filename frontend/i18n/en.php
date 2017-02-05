@@ -1,7 +1,7 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Plugin name:    Userstatus
+*   Plugin name:    User Status
 *   Author:         Chiffa
 *   Web:            http://goweb.pro
 *
@@ -9,23 +9,44 @@
 */
 
 /**
- * English language file for plug-in
+ * English language file for plugin
  */
-return array(
+return [
+    'config' => [
+        'main' => [
+            'choose_activity' => [
+                'name' => 'Publication in the activity stream on the user\'s discretion',
+                'description' => 'Allow users to choose - or not to publish a status update to the "Activity"',
+            ]
+        ]
+    ],
+    'config_sections' => [
+        'main' => [
+            'name' => 'Base',
+            'description' => '',
+        ]
+    ],
+    'activity' => [
+        'settings' => [
+            'options' => [
+                'update_status' => 'User status update',
+            ]
+        ]
+    ],
 
-    'user_status_setup' => 'Edit status',
-    'user_status_update' => 'Update',
-    'user_status_change_ok' => 'Status updated',
+    'change' => 'Edit',
+    'change_ok' => 'Saved',
 
-    'user_status_save' => 'Save',
-    'user_status_cancel' => 'Cancel',
+    'updated' => 'Update',
+    'updated_now' => 'Update now',
 
-    'event_type_update_status' => 'Profile status update',
+    'save' => 'Save',
+    'cancel' => 'Candel',
 
-    'event_update_status' => 'updated profile status',
-    'event_update_status_clear' => 'erase profile status',
+    'event_update_status_male' => 'update profile status',
+    'event_update_status_male_clear' => 'erase profile status',
 
-    'event_update_status_female' => 'updated profile status',
-    'event_update_status_clear_female' => 'erase profile status',
+    'event_update_status_female' => 'update profile status',
+    'event_update_status_female_clear' => 'erase profile status',
 
-);
+];

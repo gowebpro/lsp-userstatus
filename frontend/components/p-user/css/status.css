@@ -1,12 +1,15 @@
+/**
+ *  Plugin name:    User Status
+ *  Author:         Chiffa
+ *  Web:            http://goweb.pro
+ */
+
 
 .ls-user-status {
     position: relative;
     margin-top: 10px;
 }
 
-/**
- * Редактор
- */
 .ls-user-status-editor {
     position: absolute;
     top: -12px;
@@ -19,6 +22,7 @@
     border: 1px solid #ddd;
     padding: 10px;
     -webkit-box-shadow: 0 0 5px #ddd;
+    -moz-box-shadow: 0 0 5px #ddd;
     box-shadow: 0 0 5px #ddd;
     background: #ffffff;
     background: -moz-linear-gradient(top, #ffffff 0%, #f3f3f3 100%);

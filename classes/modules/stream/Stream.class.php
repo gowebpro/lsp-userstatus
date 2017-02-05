@@ -1,7 +1,7 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Plugin name:    Userstatus
+*   Plugin name:    User Status
 *   Author:         Chiffa
 *   Web:            http://goweb.pro
 *
@@ -14,8 +14,8 @@ class PluginUserstatus_ModuleStream extends PluginUserstatus_Inherit_ModuleStrea
     /**
      * Получает объекты статусов
      *
-     * @param unknown_type $aIds
-     * @return unknown
+     * @param  array $aIds
+     * @return array
      */
     protected function loadRelatedUserStatus($aIds) {
         return $this->PluginUserstatus_User_GetStatusItemsByArrayUserId($aIds);

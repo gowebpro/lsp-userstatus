@@ -1,11 +1,8 @@
-/*-------------------------------------------------------
-*
-*   Plugin name:    Userstatus
-*   Author:         Chiffa
-*   Web:            http://goweb.pro
-*
----------------------------------------------------------
-*/
+/**
+ *  Plugin name:    User Status
+ *  Author:         Chiffa
+ *  Web:            http://goweb.pro
+ */
 
 
 ;(function($) {

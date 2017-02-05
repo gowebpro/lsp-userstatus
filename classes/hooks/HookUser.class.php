@@ -1,7 +1,7 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Plugin name:    Userstatus
+*   Plugin name:    User Status
 *   Author:         Chiffa
 *   Web:            http://goweb.pro
 *

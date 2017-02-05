@@ -1,5 +1,5 @@
 {**
- * Ñîáûòèå "Îáíîëåíèå ñòàòóñà"
+ * Ğ¡Ğ¾Ğ±Ñ‹Ñ‚Ğ¸Ğµ "ĞĞ±Ğ½Ğ¾Ğ²Ğ»ĞµĞ½Ğ¸Ğµ ÑÑ‚Ğ°Ñ‚ÑƒÑĞ°"
  *
  * @param object $event
  *}
@@ -15,11 +15,11 @@
 {lang "plugin.userstatus.event_update_status_{$gender}"}
 
 {*if $target}
-	{if trim($sTextEvent)}
-		{lang "plugin.userstatus.event_update_status_{$gender}"}
+    {if trim($sTextEvent)}
+        {lang "plugin.userstatus.event_update_status_{$gender}"}
 
         {activity_event_text text=$target->getText()}
-	{else}
-		{lang "plugin.userstatus.event_update_status_{$gender}_clear"}
-	{/if}
+    {else}
+        {lang "plugin.userstatus.event_update_status_{$gender}_clear"}
+    {/if}
 {/if*}

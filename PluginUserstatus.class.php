@@ -1,7 +1,7 @@
 <?php
 /*-------------------------------------------------------
 *
-*   Plugin name:    Userstatus
+*   Plugin name:    User Status
 *   Author:         Chiffa
 *   Web:            http://goweb.pro
 *
@@ -47,18 +47,16 @@ class PluginUserstatus extends Plugin
          * Добавляем в ленту новый тип события
          *  - при наличии модуля Stream
          */
-        if (class_exists('ModuleStream')){
-            $this->Stream_AddEventType('update_status', array('related' => 'userStatus'));
+        if (class_exists('ModuleStream')) {
+            $this->Stream_AddEventType('update_status', [ 'related' => 'userStatus' ]);
             /**
              * Добавляем текстовки новых типов событий
              */
             $this->Lang_AddMessages([
-                'settings' => [
-                    'options' => [
-                        'update_status' => $this->Lang_Get('plugin.userstatus.event_type_update_status')
-                    ]
-                ]
-            ], [ 'name' => 'activity' ]);
+                'settings' => $this->Lang_Get('plugin.userstatus.activity.settings')
+            ], [
+                'name' => 'activity'
+            ]);
             $this->Viewer_Assign('aLang', $this->Lang_GetLangMsg());
         }
     }
