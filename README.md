@@ -1,19 +1,21 @@
-LSP Userstatus
-==============
+User Status plugin for [LiveStreet CMS](http://livestreetcms.com/ "LiveStreet CMS")
+===================================================================================
 
-Plugin for [LiveStreet CMS](http://livestreetcms.com/ "LiveStreet CMS")
------------------------------------------------------------------------
-
-Attention
-To use this plugin requires **Livestreet CMS version 1.0 or later**.
-
-
-About project
--------------
-Добавляет простой текстовый статус в профиль пользователя
-
-Changelog:
+Требования
 ----------
+LiveStreet CMS версии **2.0.0** или более поздней.
+
+
+Описание
+--------
+Добавляет простой текстовый статус в профиль пользователя.
+
+
+История версий:
+---------------
+**2.0.0:**
+- Адаптация к LS 2.0
+
 **1.3:**
 - Добавлено событие в ленту Активности.
 
@@ -29,6 +31,6 @@ Changelog:
 - Первая сборка.
 
 
-License
--------
-[ ![CC BY-NC](http://i.creativecommons.org/l/by-nc/3.0/88x31.png "CC BY-NC") ](http://creativecommons.org/licenses/by-nc/3.0/ "CC BY-NC")
+Лицензия
+--------
+[ ![CC BY-NC](http://i.creativecommons.org/l/by-nc/4.0/88x31.png "CC BY-NC") ](http://creativecommons.org/licenses/by-nc/4.0/ "CC BY-NC")
