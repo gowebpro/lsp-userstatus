@@ -37,8 +37,8 @@ class PluginUserstatus extends Plugin
         /**
          * Подключаем компоненты
          */
-        $this->Component_Add('userstatus:user');
-        $this->Component_Add('userstatus:activity');
+        $this->Component_Add('userstatus:p-user');
+        $this->Component_Add('userstatus:p-activity');
         /**
          * Подключаем JS
          */

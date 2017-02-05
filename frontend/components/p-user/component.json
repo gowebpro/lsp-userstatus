@@ -1,9 +1,6 @@
 {
-    "name": "user",
+    "name": "p-user",
     "version": "1.0.0",
-    "dependencies": {
-
-    },
     "templates": {
         "status": "status.tpl"
     },

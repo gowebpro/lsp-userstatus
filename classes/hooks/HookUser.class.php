@@ -24,12 +24,11 @@ class PluginUserstatus_HookUser extends Hook
     public function UserHeaderEnd($aParams = [])
     {
         $oUserProfile = isset($aParams['user']) ? $aParams['user'] : null;
-        $oUserCurrent = $this->User_GetUserCurrent();
         if ($oUserProfile) {
             $oUserStatus = $this->PluginUserstatus_User_GetStatusByUserId($oUserProfile->getId());
             $this->Viewer_Assign('user', $oUserProfile, true);
             $this->Viewer_Assign('status', $oUserStatus, true);
-            return $this->Viewer_Fetch("Component@userstatus:user.status");
+            return $this->Viewer_Fetch("Component@userstatus:p-user.status");
         }
     }
 
@@ -37,7 +36,7 @@ class PluginUserstatus_HookUser extends Hook
     {
         if (isset($aParams['event'])) {
             $this->Viewer_Assign('event', $aParams['event'], true);
-            return $this->Viewer_Fetch("Component@userstatus:activity.event_status");
+            return $this->Viewer_Fetch("Component@userstatus:p-activity.event_status");
         }
     }
 

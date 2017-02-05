@@ -1,0 +1,7 @@
+{
+    "name": "p-activity",
+    "version": "1.0.0",
+    "templates": {
+        "event_status": "status.tpl"
+    }
+}
