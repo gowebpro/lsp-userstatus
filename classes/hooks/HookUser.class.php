@@ -17,8 +17,15 @@ class PluginUserstatus_HookUser extends Hook
 
     public function RegisterHook()
     {
+        $this->AddHook('start_action', 'ComponentsInit');
         $this->AddHook('template_user_header_end', 'UserHeaderEnd');
         $this->AddHook('template_activity_event_update_status', 'ActivityEventUpdateStatus');
+    }
+
+    public function ComponentsInit()
+    {
+        $this->Component_Add('userstatus:p-user');
+        $this->Component_Add('userstatus:p-activity');
     }
 
     public function UserHeaderEnd($aParams = [])

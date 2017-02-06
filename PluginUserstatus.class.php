@@ -35,11 +35,6 @@ class PluginUserstatus extends Plugin
     public function Init()
     {
         /**
-         * Подключаем компоненты
-         */
-        $this->Component_Add('userstatus:p-user');
-        $this->Component_Add('userstatus:p-activity');
-        /**
          * Подключаем JS
          */
         $this->Viewer_AppendScript(Plugin::GetPath(__CLASS__) . 'frontend/assets/js/init.js');
