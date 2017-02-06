@@ -7,8 +7,8 @@
     <author>
         <lang name="default">Chiffa</lang>
     </author>
-    <homepage>http://ls.goweb.pro/plugin-userstatus</homepage>
-    <version>2.0.0</version>
+    <homepage>http://goweb.pro</homepage>
+    <version>2.0.1</version>
     <requires>
         <livestreet>2.0.*</livestreet>
         <plugins></plugins>
