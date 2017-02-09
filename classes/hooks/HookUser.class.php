@@ -17,15 +17,30 @@ class PluginUserstatus_HookUser extends Hook
 
     public function RegisterHook()
     {
-        $this->AddHook('start_action', 'ComponentsInit');
+        $this->AddHook('start_action', 'StartAction');
         $this->AddHook('template_user_header_end', 'UserHeaderEnd');
         $this->AddHook('template_activity_event_update_status', 'ActivityEventUpdateStatus');
     }
 
-    public function ComponentsInit()
+    public function StartAction()
     {
         $this->Component_Add('userstatus:p-user');
         $this->Component_Add('userstatus:p-activity');
+        /**
+         * Добавляем в ленту новый тип события
+         *  - при наличии модуля Stream
+         */
+        if (class_exists('ModuleStream')) {
+            $this->Stream_AddEventType('update_status', [ 'related' => 'userStatus' ]);
+            /**
+             * Добавляем текстовки новых типов событий
+             */
+            $this->Lang_AddMessages([
+                'settings' => $this->Lang_Get('plugin.userstatus.activity.settings')
+            ], [
+                'name' => 'activity'
+            ]);
+        }
     }
 
     public function UserHeaderEnd($aParams = [])
